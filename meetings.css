@@ -18,12 +18,8 @@ header li {
 .titulo {
     color: black;
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 6rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: .3rem;
-    border: 15px solid #e44037;
+    letter-spacing: .25rem;
+    border: .8rem solid #e44037;
     box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
 }
   /* IMAGEN SCROLL DE LA PRESENTACION */
@@ -77,6 +73,7 @@ header li {
 .sidebarCSS li {
   font-family: 'Comfortaa', cursive;
   color: black;
+  overflow-x: hidden;
 }
 #divcards {
   background-image: url(./imagenes/fondo2.png);
