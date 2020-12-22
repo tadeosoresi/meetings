@@ -1,0 +1,331 @@
+/* IMPORTAMOS FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carme&family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;  
+}
+body  {
+    background-color: #ffffff62;
+}
+/* ESTILOS DEL HEADER COMUN TITULO/LOGO/MENU INGRESO */
+.titulo {
+    background-color:rgb(255, 121, 107);
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 10% 65% 25%;
+    grid-template-rows: 150px;
+}
+.logo {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portada {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2.5%;
+    width: 100%;
+    height: 100%;
+}
+.portada h1 {
+    text-align: center; 
+    font-family: 'Kumbh Sans', sans-serif; 
+    font-size: 4em;
+}
+.nav {
+    margin-top: 36%;
+    margin-left: 42%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 50px;
+    transform: translateX(-50%) translateY(-50%);
+}
+.nav li {
+    display: inline-block;
+}
+.nav li a {
+    color: #000000;
+    font-size: 1.2em;
+    font-family: 'Comfortaa', cursive;
+    padding: 0 25px;
+}
+.horizontal::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .3s;
+}
+.horizontal:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+/* VENTANAS MODALES QUE SURGEN DEL MENU DE HEADER */
+.modal {
+    display: none;
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    background-color: silver;
+    z-index: 999;
+    top: 8%;
+    left: 27%;
+    border-radius: 1%;
+    -webkit-box-shadow: 13px 14px 21px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 14px 21px -8px rgba(0,0,0,0.75);
+    box-shadow: 13px 14px 21px -8px rgba(0,0,0,0.75);
+}
+.modal:target {
+    display: block;
+    background-color: rgba(27, 27, 27, 0.966);
+}
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+#datos {
+    width: 65%;
+    height: 100%;
+    margin: 5px;
+    background-color: rgb(241, 193, 188);
+}
+/* SETEAMOS MENU VERTICAL BUSCADOR DE EVENTOS */
+.menu {
+    float: left;
+    width: 18%;
+    height: 1500px;
+    background-color: #252525;
+    margin: 0;
+}
+.menuver {
+    width: 100%;
+    height: 1200px;
+    background-color: #252525;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5%;
+}
+/* EFECTOS BUSCADOR */
+#buscador {
+    width: 100%;
+    height: 50px;
+    margin-top: 21.5%;
+    background-color: rgba(199, 241, 241, 0.089);
+    outline: none;
+    border: 0;
+    text-align: right;
+    padding-right: 5%;
+    font-size: 1.5em;
+    color: white;
+    background-image: url(./Imagenes/search.png);
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+    -webkit-transition: background-position .2s;
+}
+#buscador:focus {
+    background-position: 350px 10px;
+}
+::-webkit-input-placeholder {
+    color: #e2e2e2;
+    text-align: center;
+    opacity: .4;
+    font-size: 1em;
+}
+.menuver ul {
+    list-style-type: none;
+    margin-top: 0;
+}
+.menuver li {
+    padding: 15px;
+    border-bottom: 1px solid #323232;
+    width: 100%;
+    text-align: center;
+    transition: all 0.8s;
+}
+.menuver li:hover {
+   opacity: .9;
+   background-color: rgb(13, 89, 230);
+   cursor: pointer;
+}
+.menuver a {
+    float: left;
+    color: white;
+    opacity: .7;
+    font-size: 1.08em;
+    font-family: 'Comfortaa', cursive;
+}
+.menuver li:hover a {
+    text-decoration: overline;
+    color: black;
+    opacity: 1;
+}
+.opciones .submenu {
+    display: none;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(51, 51, 51, 0.884);
+    margin-top: 35px;
+    padding: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+.opciones .submenu2 {
+    display: none;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(51, 51, 51, 0.884);
+    margin-top: 35px;
+    padding: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+.opciones .submenu3 {
+    display: none;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(51, 51, 51, 0.884);
+    margin-top: 35px;
+    padding: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+.opciones .submenu4 {
+    display: none;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(51, 51, 51, 0.884);
+    margin-top: 35px;
+    padding: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+.opciones .submenu5 {
+    display: none;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(51, 51, 51, 0.884);
+    margin-top: 35px;
+    padding: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+.opciones .submenu:target {
+    display: block;
+    opacity: 1;
+    transition-delay: 2s;
+}
+.opciones .submenu2:target {
+    display: block;
+    opacity: 1;
+    transition-delay: 2s;
+}
+.opciones .submenu3:target {
+    display: block;
+    opacity: 1;
+    transition-delay: 2s;
+}
+.opciones .submenu4:target {
+    display: block;
+    opacity: 1;
+    transition-delay: 2s;
+}
+.opciones .submenu5:target {
+    display: block;
+    opacity: 1;
+    transition-delay: 2s;
+}
+.itemsTipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#evento {
+    margin: 9.5px;
+    font-size: 1em;
+    color: whitesmoke;
+    font-family: 'Didact Gothic', sans-serif;
+    transition: all 0.8s;
+    text-decoration: none;
+}
+#evento:hover {
+    transform: scale(1.11);
+}
+.contenido {
+    border: 1px solid black;
+    width: 82%;
+    height: 1500px;
+    display: grid;
+    grid-template-columns: 27% 27% 27%;
+    grid-template-rows: 15% 15% 15% 15%;
+    grid-gap: 5%;
+    margin: auto;
+    background-color: rgb(255, 252, 249);
+    align-items: center;
+    justify-content: center;
+    background-image: url(./fondo2.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    overflow-y: scroll;
+}
+.contenido > div {
+    display: block;
+    border-radius: 3%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 240px;
+    border: 1px solid black;
+    background-color: rgba(233, 222, 222, 0.74);
+    text-align: center;
+    margin-top: 45%;
+    padding: 10px;
+    -webkit-box-shadow: 21px 19px 31px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 21px 19px 31px -11px rgba(0,0,0,0.75);
+    box-shadow: 21px 19px 31px -11px rgba(0,0,0,0.75);    
+    transition: all 0.4s;
+}
+.contenido > div:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+.contenido p {
+    font-size: 1.4em;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+.item img {
+    width: 100%;
+    height: 85%;
+    border-radius: 3%;
+}
+footer {
+    display: grid;
+    width: 100%;
+    height: 130px;
+    background-color: rgba(51, 51, 51, 0.884);
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 100%;
+}
