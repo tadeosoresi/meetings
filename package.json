@@ -1,0 +1,19 @@
+{
+  "name": "meetings",
+  "version": "1.0.0",
+  "description": "Plataforma para realizar eventos",
+  "main": "bootstrap.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadeosoresi/meetings.git"
+  },
+  "author": "Tadeo Soresi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tadeosoresi/meetings/issues"
+  },
+  "homepage": "https://github.com/tadeosoresi/meetings#readme"
+}
