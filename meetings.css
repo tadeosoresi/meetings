@@ -8,7 +8,7 @@
 
 /* PRESENTACION DE LA PAGINA */
 header li {
-    margin: 10%;
+    margin: 2rem;
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.2em;
@@ -18,8 +18,9 @@ header li {
 .titulo {
     color: black;
     font-family: 'Kumbh Sans', sans-serif;
+    font-size: 6rem;
     letter-spacing: .25rem;
-    border: .8rem solid #e44037;
+    border: .75rem solid #e44037;
     box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
 }
   /* IMAGEN SCROLL DE LA PRESENTACION */
@@ -102,5 +103,17 @@ header li {
 #cards img {
   border-radius: 4px;
 }
-
+/* RESPONSIVE */
+@media only screen and (max-width: 700px) {
+  .titulo {
+    font-size: 2.1rem !important;
+    border: .5rem solid #e44037;
+    box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+}
+  .plataforma {
+    color: white;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+}
   
