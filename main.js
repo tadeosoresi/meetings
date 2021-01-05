@@ -17,9 +17,9 @@ $(function(){
         })
     })
     const menuSup = document.querySelector('.menuSup');
-    menuSup.style.setProperty('--animate-duration', '3.5s');
+    menuSup.style.setProperty('--animate-duration', '2s');
 
     const tituloPrincipal = document.querySelector('.titulo');
-    tituloPrincipal.style.setProperty('--animate-duration', '2.5s');
+    tituloPrincipal.style.setProperty('--animate-duration', '1s');
   });
 

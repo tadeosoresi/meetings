@@ -4,7 +4,14 @@
   "description": "Plataforma para realizar eventos",
   "main": "bootstrap.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node -sass -o meetings/ meetings/",
+    "watch:scss": "onchange 'meetings/*.css' -- npm run scss",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin /Imagenes/* --out-dir dist/Imagenes",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin home.html -d dist --htmlmin -o dist/home.html && usemin hnas.html -d dist --htmlmin -o dist/hnas.html",
+    "build": "npm run clean && npm run scss && npm run imagemin && npm run usemin"
+    
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/tadeosoresi/meetings/issues"
   },
-  "homepage": "https://github.com/tadeosoresi/meetings#readme"
+  "homepage": "https://github.com/tadeosoresi/meetings#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "concurrently": "^5.3.0",
+    "onchange": "^7.1.0",
+    "rimraf": "^3.0.2"
+  }
 }
